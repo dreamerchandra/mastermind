@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+.game {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.board {
+  display: flex;
+  flex-direction: row;
+  background: url("./background.jpg");
+  box-shadow: 7px 6px 10px 3px rgb(192 192 192);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.result-wrapper {
+  width: 100px;
+  height: 100%;
+  background-color: #2b2e2e7a;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.sandbox {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  border-radius: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tries,
+.options {
+  margin: 10px;
+  padding: 3px;
+  background-color: #cedadd42;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 15px;
+  box-shadow: inset 4px 5px 12px 2px rgb(0 0 0 / 20%);
+}
+
+.tries > code,
+.options > code {
+  width: 20px;
+  height: 20px;
+  background: azure;
+  border-radius: 50%;
+}
+
+[data-code="red"] {
+  background: radial-gradient(#ff0000, #ff0000bf, #ff000075) !important;
+  box-shadow: 5px 5px 9px 2px rgb(0 0 0 / 20%);
+}
+[data-code="blue"] {
+  background: radial-gradient(#0000ff, #0000ffbf, #0000ff75) !important;
+  box-shadow: 5px 5px 9px 2px rgb(0 0 0 / 20%);
+}
+[data-code="black"] {
+  background: radial-gradient(#000000, #000000bf, #00000075) !important;
+  box-shadow: 5px 5px 9px 2px rgb(0 0 0 / 20%);
+}
+[data-code="brown"] {
+  background: rgb(102, 23, 23) !important;
+  box-shadow: 5px 5px 9px 2px rgb(0 0 0 / 20%);
+}
+[data-code="yellow"] {
+  background: yellow !important;
+}
+[data-code="green"] {
+  background: green !important;
+}
+[data-code="white"] {
+  background: rgb(197, 99, 115) !important;
+}
+[data-code="orange"] {
+  background: orange !important;
+}
+[data-code="none"] {
+  background: radial-gradient(white, transparent) !important;
+}
+
+[data-code="full"] {
+  background: red !important;
+}
+[data-code="partial"] {
+  background: black !important;
 }
